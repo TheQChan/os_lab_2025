@@ -1,10 +1,11 @@
 sum=0
 count=0
 
-while read -r num; do
+for num in "$@"; do
     sum=$((sum + num))
     count=$((count + 1))
 done
+
 
 average=$((sum / count))
 echo "Количество: $count"
